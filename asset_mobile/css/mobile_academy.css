@@ -381,6 +381,10 @@ flex-shrink:0;
   border-bottom: 1px solid #dcdcdc;
   margin-bottom: 0.5rem;
 }
+.mob_academy_fee_box_2 {
+  padding: 1rem;
+  padding-bottom: 0;
+}
 
 .mob_academy_fee_list ul {
   list-style: none;
@@ -1564,10 +1568,12 @@ flex-shrink:0;
   padding: 1rem;
 }
 
+
+/* 
 .mobile_login_check {
   width: 100%;
   justify-content: start;
-}
+} */
 
 .mobile_login_label_checkbox {
   display: block;
@@ -1598,7 +1604,7 @@ flex-shrink:0;
   width: 0;
 }
 
-.mobile_login_checkbox::before {
+/* .mobile_login_checkbox::before {
   content: "";
   width: 22px;
   height: 22px;
@@ -1606,27 +1612,8 @@ flex-shrink:0;
   top: 0;
   left: 0;
   background: #e73725;
-}
+} */
 
-.mobile_login_checkbox::after {
-  content: "";
-  left: 7px;
-  top: 1px;
-  width: 6px;
-  height: 13px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  display: none;
-  transition: all 0.4s ease-in-out;
-}
-
-.mobile_login_label_checkbox input:checked + .mobile_login_checkbox::after {
-  display: block;
-}
 
 .mobile_login_label_checkbox p {
   font-size: 14px;
@@ -1658,6 +1645,79 @@ flex-shrink:0;
   justify-content: start;
   align-items: center;
 }
+
+.mobile_login_checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+}
+
+.mobile_login_checkbox::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 1px;
+  width: 6px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: all 0.4s ease-in-out;
+}
+
+.mobile_login_label_checkbox input:checked + .mobile_login_checkbox {
+  background: #e73725;
+  border: 1px solid #e73725;
+}
+
+.mobile_login_label_checkbox input:checked + .mobile_login_checkbox::after {
+  display: block;
+}
+
+
+/* Styles for the checkbox container */
+.mobile_login_checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background: #fff !important; /* Default background color */
+  border: 1px solid #dcdcdc !; /* Default border color */
+}
+
+/* Styles for the checkmark */
+.mobile_login_checkbox::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: all 0.4s ease-in-out;
+}
+
+/* When checkbox is checked */
+.mobile_login_label_checkbox input:checked + .mobile_login_checkbox {
+  background: #e73725 !important; /* Change background color */
+  border: 1px solid #e73725; /* Change border color */
+}
+
+/* Show checkmark when checkbox is checked */
+.mobile_login_label_checkbox input:checked + .mobile_login_checkbox::after {
+  display: block;
+}
+
+
 
 /* slider css  */
 
@@ -1841,9 +1901,10 @@ input:checked + .mob_switch_slider:before {
   background-color: #fff;
   color: #1991eb;
   font-family: DM Sans;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 600;
+  letter-spacing: 0.05rem;
 }
 
 .mob_apply_filter{
@@ -1851,12 +1912,13 @@ input:checked + .mob_switch_slider:before {
   background: #FE5C4D;
   color:#fff;
   font-family: DM Sans;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 600;
   padding: 0.75rem 0.94rem;
   outline: none;
   border: none;
+  letter-spacing: 0.05rem;
 }
 
 

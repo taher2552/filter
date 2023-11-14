@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400&family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mobile_login_container {
+  max-width: 550px;
+  margin: 0 auto;
+  padding-top: 0.8rem;
+  flex-direction: column;
+}
+
+.mobile_top_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile_login_sign_up {
+  color: #222;
+  font-family: DM Sans;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+  text-transform: capitalize;
+  margin-top: 2rem;
+}
+
+.mobile_login_account {
+  color: #505050;
+  font-family: DM Sans;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.mobile_login_account span {
+  color: #fe5c4d;
+}
+
+.mobile_login_account_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.9rem;
+}
+
+.mobile_login_option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.mobile_login_tabs {
+  display: inline-flex;
+  padding: 0.3rem 0.8rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 1.875rem;
+  background: #f5f6fa;
+  color: #000;
+  font-family: DM Sans;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.mobile_login_active_tab {
+  background: #d0ddff;
+}
+
+.mobile_login_label_checkbox {
+  display: block;
+  text-align: left;
+  color: #515c61;
+  padding: 0;
+  position: relative;
+  padding-left: 35px;
+  margin: 0 0 6px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: unset;
+  font-family: "DM Sans", sans-serif;
+}
+
+.mobile_login_label_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.mobile_login_checkbox::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #e73725;
+}
+
+.mobile_login_checkbox::after {
+  content: "";
+  left: 7px;
+  top: 1px;
+  width: 6px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  display: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.mobile_login_label_checkbox input:checked + .mobile_login_checkbox::after {
+  display: block;
+}
+
+.mobile_login_label_checkbox p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.mobile_login_label_checkbox p span {
+  font-weight: 600;
+}
+
+.mobile_login_label_checkbox p span a {
+  color: #000000;
+}
+
+.mobile_login_label_checkbox p span a:hover {
+  color: #e73725;
+  text-decoration: underline;
+  transition: all 0.4s ease-in-out;
+}
+
+.mobile_login_input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+}
+
+.mobile_login_input input {
+  border-radius: 0.3125rem;
+  border: 1px solid #dcdcdc;
+  background: #fff;
+  padding: 1rem;
+  outline: none;
+  margin-bottom: 0.94rem;
+}
+
+.mobile_login_input input:first-child {
+  margin-top: 2rem;
+}
+
+.mobile_login_check {
+  width: 100%;
+  justify-content: start;
+  padding-left: 1rem;
+}
+
+.mobile_login_create_profile {
+  width: 100%;
+  padding: 1rem;
+  padding-right: 1rem;
+}
+
+.mobile_login_create_profile button {
+  border-radius: 0.3125rem;
+  border: 1px solid #fe5c4d;
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  color: #fe5c4d;
+  font-family: DM Sans;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+.mobile_login_line {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.mobile_login_line p {
+  position: relative;
+  font-weight: 500;
+  color: #505050;
+  font-family: DM Sans;
+  font-size: 0.875rem;
+}
+
+.mobile_login_line p::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #505050;
+  left: -100%;
+  top: 50%;
+  position: absolute;
+}
+
+.mobile_login_line p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #505050;
+  right: -100%;
+  top: 50%;
+  position: absolute;
+}
+
+.mobile_login_media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mobile_login_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3125rem;
+  border: 1px solid #dcdcdc;
+  background: #fff;
+  padding: 0.56rem 2rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.mobile_login_social:first-child {
+  margin-right: 1rem;
+}
+
+.mobile_login_google {
+  color: #222;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: 0.3rem;
+}
+
+/* authentication page */
+
+.otp-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.otp-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.otp-box {
+  width: 3.5rem;
+  height: 3rem;
+  border: 1px solid #dcdcdc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left:1rem;
+
+}
+
+.otp-input {
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.mobile_login_authenticate{
+  color: #000;
+font-family: DM Sans;
+font-size: 1.376rem;
+font-weight: 600;
+}
+
+.mobile_login_verify{
+  color:#505050;
+text-align: center;
+font-family: DM Sans;
+font-size: 0.875rem;
+font-weight: 500;
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+.mobile_login_verify span:first-child{
+  font-weight: 700;
+}
+
+.mobile_login_verify span:last-child{
+  color:#0172FF;
+  cursor: pointer;
+}
+
+.mobile_login_otp p{
+  color: #fe5c4d;
+font-family: DM Sans;
+font-size: 0.875rem;
+font-weight: 500;
+cursor: pointer;
+margin-bottom: 5rem;
+}
+
+.mobile_login_otp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* authentication page  ends*/
+
+/* password get otp  */
+
+.mobile_login_get_otp{
+  color: #4A6EA9;
+font-family: DM Sans;
+font-size: 1rem;
+font-weight: 500;
+cursor: pointer;
+}
+
+.mobile_login_get_otp{
+  position: absolute;
+  top:69%;
+  left:80%;
+}
+
+.mobile_get_otp_btn{
+  margin-top: 5rem;
+}
+
+.forget_password_mob{
+  margin-top: 1rem;
+  text-align: right;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.forget_password_mob p{
+  color:#fe5c4d;
+  text-align: end;
+font-family: DM Sans;
+font-size: 0.75rem;
+}
+/* password get otp ends */
+
+
+@media only screen and (max-width: 430px) {
+  .mobile_login_get_otp{
+    left:75%;
+  }
+
+  .mobile_login_tabs {
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+
+@media only screen and (max-width: 370px) {
+  /* .mobile_login_option {
+    flex-direction: column;
+  } */
+
+  .mobile_login_tabs {
+   font-size: 0.9rem;
+  }
+ 
+
+  .mobile_login_get_otp{
+    left:70%;
+  }
+
+  .mobile_login_social{
+    padding: 0.56rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .mobile_login_tabs {
+    font-size: 0.75rem;
+   }
+  
+}
